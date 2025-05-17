@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Heaton park event</title>
+
+<link rel="website icon" type="png"
+href="e:\live in the park (2)\live in the park\live in.png">
+ <script>
+    function MM_preloadImages() {
+      var d = document;
+      if (d.images) {
+        if (!d.MM_p) d.MM_p = new Array();
+        var i, j = d.MM_p.length, a = MM_preloadImages.arguments;
+        for (i = 0; i < a.length; i++)
+          if (a[i].indexOf("#") != 0) {
+            d.MM_p[j] = new Image;
+            d.MM_p[j++].src = a[i];
+          }
+      }
+    }
+
+    function MM_swapImgRestore() {
+      var i, x, a = document.MM_sr;
+      for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++)
+        x.src = x.oSrc;
+    }
+
+    function MM_findObj(n, d) {
+      var p, i, x;
+      if (!d) d = document;
+      if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+        d = parent.frames[n.substring(p + 1)].document;
+        n = n.substring(0, p);
+      }
+      if (!(x = d[n]) && d.all) x = d.all[n];
+      for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+      for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+      if (!x && d.getElementById) x = d.getElementById(n);
+      return x;
+    }
+
+    function MM_swapImage() {
+      var i, j = 0, x, a = MM_swapImage.arguments;
+      document.MM_sr = new Array();
+      for (i = 0; i < (a.length - 2); i += 3)
+        if ((x = MM_findObj(a[i])) != null) {
+          document.MM_sr[j++] = x;
+          if (!x.oSrc) x.oSrc = x.src;
+          x.src = a[i + 2];
+        }
+    }
+  </script>
+</head>
+<style type="text/css">
+h1 {
+    font-size: 36px;
+    color: #3C43B8;
+}
+h2 {
+    font-size: 16px;
+    color: #a421fc;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+body {
+    background-image: url("musbackround1_08.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.social-icons {
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center (if needed) */
+  gap: 15px;
+  margin-top: 20px;        /* Optional: adds spacing from top */
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.facebook { background: #3b5998; }
+.twitter  { background: #1da1f2; }
+.instagram { background: #e1306c; }
+
+.icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+h3 {
+    font-size: 36px;
+    color: #2591E9;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Icons</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    #particles-bl, #particles-br {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #particles-bl {
+    left: 0;
+  }
+
+  #particles-br {
+    right: 0;
+  }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .facebook { background: #3b5998; }
+    .twitter  { background: #1da1f2; }
+    .instagram { background: #e1306c; }
+
+    .icon:hover {
+      transform: scale(1.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    footer {
+      background-color: #5B0BED;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+    }
+    footer h4 {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+</html>
+
+</head>
+
+<body onLoad="MM_preloadImages('home1.png','Artists1.png','tickets1.png','contacts1.png','information1.png')"><canvas id="particles-bl"></canvas>
+<canvas id="particles-br"></canvas>
+<script>
+function createParticles(canvasId, directionX, directionY) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx.fillStyle = "#fff";
+  ctx.strokeStyle = "#fff";
+
+const colors = [
+  "rgba(255, 255, 255, 0.5)",   // cyan
+  "rgba(255, 255, 255, 0.5)",   // magenta
+  "rgba(255, 255, 255, 0.5)"    // yellow
+];
+  const maxParticles = 100;
+  const particles = [];
+  
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+
+  class Particle {
+    constructor() {
+      this.x = directionX > 0 ? 0 : canvas.width;
+      this.y = directionY > 0 ? 0 : canvas.height;
+      this.size = Math.random() * 9 + 3;
+      this.speedX = directionX * (Math.random() * 1 + 1);
+      this.speedY = directionY * (Math.random() * 1 + 1);
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+      ctx.closePath();
+      ctx.strokeStyle = "#fff";
+    }
+
+    outOfBounds() {
+      return (
+        this.x < -10 || this.x > canvas.width + 10 ||
+        this.y < -10 || this.y > canvas.height + 10
+      );
+    }
+  }
+
+  function addParticle() {
+    particles.push(new Particle());
+    if (particles.length > 100) particles.shift(); // Limit count
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    addParticle();
+    particles.forEach((p, i) => {
+      p.update();
+      p.draw();
+      if (p.outOfBounds()) particles.splice(i, 1);
+    });
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
+
+// Bottom-left → Top-right
+createParticles("particles-bl", 1, -1);
+
+// Bottom-right → Top-left
+createParticles("particles-br", -1, -1);
+</script>
+
+<table width="1718" height="994" border="0">
+  <tbody>
+    <tr>
+      <td height="410" colspan="3"><video width="1719" height="410" poster="未命名設計.gif" autoplay="autoplay" loop="loop" >
+        <source src="未命名設計" type="video/mp4">
+      </video></td>
+    </tr>
+    <tr>
+      <td height="94" colspan="3"><a href="Index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','home1.png',1)"><img src="home.png" alt="" width="238" height="89" id="Image2"></a><a href="artists.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','Artists1.png',1)"><img src="Artists.png" alt="" width="238" height="89" id="Image3"></a><a href="tickets.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','tickets1.png',1)"><img src="tickets.png" alt="" width="238" height="89" id="Image4"></a><a href="tickets imformation.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','information1.png',1)"><img src="information.png" alt="" width="238" height="89" id="Image9"></a><a href="contact.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','contacts1.png',1)"><img src="contacts.png" alt="" width="238" height="89" id="Image5"> </a></td>
+    </tr>
+    <tr>
+      <td width="463" height="258"><img src="photo-1506157786151-b8491531f063.jpeg" width="463" height="256" alt=""/></td>
+      <td width="407" rowspan="2" valign="top"><h1>Welcome to Live In The Park</h1>
+        <h2>A bland new music event starting on 26/7/2025 in london </h2>
+        <h2>get ready for<span data-teams="true"> your ultimate d</span><span data-teams="true">estination for Live Music Experiences!</span></h2>
+        <h2><span data-teams="true">Discover the rhythm of the city with Live in the park, your go-to hub for the hottest music events, festivals, and concerts happening near you. Whether you're into rock, hip-hop, EDM, jazz, or indie vibes, we've got something for every music lover. Browse upcoming events, grab tickets, explore artist lineups, and join a community that lives for unforgettable nights and epic soundtracks.</span></h2>
+        <h2>&nbsp;</h2>
+        <h2><span data-teams="true">Let the music lead the way — start your journey now.</span></h2>
+        <h2>&nbsp;</h2>
+      <p><img src="big1194Pdu3hB.jpg" alt="" width="556" height="540" usemap="#Map"/></p></td>
+      <td width="432"><img src="Music-Festival2.jpg" width="421" height="246" alt=""/></td>
+    </tr>
+    <tr>
+      <td height="222"><img src="217150575.jpg" width="463" height="303" alt=""/></td>
+      <td><img src="images (1).jpg" width="432" height="268" alt=""/></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+ <!-- Social Media Icons -->
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank" class="icon facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" class="icon twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" class="icon instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+ <!-- Footer -->
+  <footer>
+    <h4>© 2025 Live in the Park LTP. All rights reserved.</h4>
+    <h4>This work is protected by copyright law. No part may be reproduced, distributed, or modified without permission.</h4>
+    <p><a href="#top" style="color: white; text-decoration: underline;">Return to top</a></p>
+  </footer>
+<map name="Map">
+  <area shape="rect" coords="58,32,531,534" href="https://www.google.com/maps/place/Heaton+Park/@53.5349329,-2.2569641,16z/data=!4m14!1m7!3m6!1s0x487bb006264fc2c9:0x2581bc3b9853b122!2sHeaton+Park!8m2!3d53.5359532!4d-2.2544321!16zL20vMDZsOWcy!3m5!1s0x487bb006264fc2c9:0x2581bc3b9853b122!8m2!3d53.5359532!4d-2.2544321!16zL20vMDZsOWcy?entry=ttu&g_ep=EgoyMDI1MDUwNS4wIKXMDSoASAFQAw%3D%3D">
+</map>
+</body>
+</html>
